@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #14161f;
+  color: #e8e8ea;
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #2a2d3a;
+  margin-bottom: 32px;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  margin-right: 24px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 24px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #a8acbd;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.15s;
+}
+
+.navbar-links a:hover {
+  color: #fff;
+}
+
+.auth-card {
+  background: #1e2130;
+  border-radius: 12px;
+  padding: 32px;
+  border: 1px solid #2a2d3a;
+}
+
+.auth-card h2 {
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.auth-card p {
+  color: #a8acbd;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #a8acbd;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  background: #14161f;
+  border: 1px solid #2a2d3a;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #e8e8ea;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #5b7fff;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 11px;
+  background: #5b7fff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.btn-primary:hover {
+  background: #4a6ae8;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.task-card {
+  background: #1e2130;
+  border: 1px solid #2a2d3a;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.task-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-info h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.task-info p {
+  font-size: 13px;
+  color: #a8acbd;
+  margin-bottom: 10px;
+}
+
+.task-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.badge-pending { background: #4a3b1a; color: #fbbf24; }
+.badge-completed { background: #16352a; color: #4ade80; }
+.badge-in-progress { background: #1a3354; color: #60a5fa; }
+
+.priority-high, .priority-medium, .priority-low {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.priority-high { color: #f87171; }
+.priority-medium { color: #fbbf24; }
+.priority-low { color: #4ade80; }
+
+.task-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.btn-small {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #2a2d3a;
+  background: #14161f;
+  color: #e8e8ea;
+  cursor: pointer;
+}
+
+.btn-small:hover {
+  background: #2a2d3a;
+}
+
+.btn-delete {
+  color: #f87171;
+  border-color: #4a2424;
+}
+
+.btn-delete:hover {
+  background: #2a1818;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+}
+.tasks-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.tasks-form-panel {
+  flex: 0 0 260px;
+}
+
+.tasks-list-panel {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .tasks-layout {
+    flex-direction: column;
+  }
+  .tasks-form-panel {
+    flex: 1;
+    width: 100%;
+  }
+}
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+}
+.btn-logout {
+  background: transparent;
+  border: 1px solid #f87171;
+  color: #f87171;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-logout:hover {
+  background: #2a1818;
+}
+.category-tag {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #2a2d3a;
+  color: #a8acbd;
+}
